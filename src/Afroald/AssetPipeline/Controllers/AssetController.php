@@ -15,7 +15,9 @@ class AssetController extends BaseController {
             App::abort(404);
         }
 
-        return \Response::make($asset, 200, array('Content-Type' => $asset->mimeType()))
+        $content = \Input::get('body') == 1 ? $asset->body() : (string) $asset;
+
+        return \Response::make($content, 200, array('Content-Type' => $asset->mimeType()))
                     ->setPublic()
                     ->setLastModified($asset->lastModified());
     }
