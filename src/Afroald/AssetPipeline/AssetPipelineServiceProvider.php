@@ -1,7 +1,6 @@
 <?php namespace Afroald\AssetPipeline;
 
 use Illuminate\Support\ServiceProvider;
-use Sprockets\Pipeline;
 
 class AssetPipelineServiceProvider extends ServiceProvider {
 
@@ -33,7 +32,7 @@ class AssetPipelineServiceProvider extends ServiceProvider {
 	{
 		$this->app['asset-pipeline'] = $this->app->share(function($app)
 		{
-			return new Pipeline(\Config::get('asset-pipeline::load_paths'));
+			return new AssetPipeline(\Config::get('asset-pipeline::load_paths'));
 		});
 	}
 

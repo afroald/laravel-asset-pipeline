@@ -2,9 +2,27 @@
 
 if ( ! function_exists('stylesheet_link_tag'))
 {
-    function stylesheet_link_tag($name = 'application')
+    function stylesheet_link_tag($name = 'application', $media = 'screen', $debug = false)
     {
-        return 'test';
+        $asset = AssetPipeline::asset($name, 'stylesheet');
+        $urls = array();
+
+        if (Config::get('asset-pipeline::debug') || $debug) {
+            $dependencies = $asset->dependencies;
+            foreach ($dependencies as $dependency)
+            {
+                array_push($urls, AssetPipeline::url($dependency));
+            }
+        }
+
+        $urls[] = AssetPipeline::url($asset);
+        $html = array();
+        foreach ($urls as $url)
+        {
+            $html[] = "<link href=\"$url\" media=\"$media\" rel=\"stylesheet\" />";
+        }
+
+        return implode("\n", $html);
     }
 }
 
