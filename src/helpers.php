@@ -7,7 +7,7 @@ if ( ! function_exists('stylesheet_link_tag'))
         $asset = AssetPipeline::asset($name, 'stylesheet');
         $urls = array();
 
-        if (Config::get('asset-pipeline::debug') || $debug) {
+        if (AssetPipeline::debug() || $debug) {
             $dependencies = $asset->dependencies;
             foreach ($dependencies as $dependency)
             {
@@ -46,6 +46,6 @@ if ( ! function_exists('asset_path'))
 {
     function asset_path($name)
     {
-        
+        return $name;
     }
 }

@@ -12,13 +12,13 @@ class AssetController extends BaseController {
             $asset = AssetPipeline::asset($name);
         }
         catch (AssetNotFoundException $exception) {
-            App::abort(404);
+            \App::abort(404);
         }
 
-        $content = \Input::get('body') == 1 ? $asset->body() : (string) $asset;
+        $content = \Input::get('body') == 1 ? $asset->body : (string) $asset;
 
-        return \Response::make($content, 200, array('Content-Type' => $asset->mimeType()))
+        return \Response::make($content, 200, array('Content-Type' => $asset->mimeType))
                     ->setPublic()
-                    ->setLastModified($asset->lastModified());
+                    ->setLastModified($asset->lastModified);
     }
 }

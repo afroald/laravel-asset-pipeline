@@ -8,8 +8,6 @@ return array(
 
     'manifest_path' => storage_path() .'/meta',
 
-    'public_url' => 'assets',
-
-    'debug' => true
+    'public_url' => 'assets'
 
 );

@@ -11,6 +11,15 @@ class AssetPipeline extends Pipeline {
     {
         // Also check the manifest!
 
-        return url(Config::get('asset-pipeline::public_url') . $asset->logicalPath) . (Config::get('asset-pipeline::debug') ? '?body=1' : '');
+        return url(Config::get('asset-pipeline::public_url') . $asset->logicalPath) . ($this->debug() ? '?body=1' : '');
+    }
+
+    public function debug()
+    {
+    	if (Config::has('asset-pipeline::debug')) {
+    		return Config::get('asset-pipeline::debug');
+    	}
+
+    	return Config::get('app.debug');
     }
 }
