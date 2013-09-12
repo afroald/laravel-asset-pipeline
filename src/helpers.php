@@ -46,6 +46,8 @@ if ( ! function_exists('asset_path'))
 {
     function asset_path($name)
     {
-        return $name;
+        $asset = AssetPipeline::asset($name);
+
+        return AssetPipeline::url($asset);
     }
 }
