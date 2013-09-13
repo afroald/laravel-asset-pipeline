@@ -26,11 +26,29 @@ if ( ! function_exists('stylesheet_link_tag'))
     }
 }
 
-if ( ! function_exists('javascript_include_path'))
+if ( ! function_exists('javascript_include_tag'))
 {
-    function javascript_include_path($name = 'application')
+    function javascript_include_tag($name = 'application')
     {
-        
+        $asset = AssetPipeline::asset($name, 'javascript');
+        $urls = array();
+
+        if (AssetPipeline::debug() || $debug) {
+            $dependencies = $asset->dependencies;
+            foreach ($dependencies as $dependency)
+            {
+                array_push($urls, AssetPipeline::url($dependency));
+            }
+        }
+
+        $urls[] = AssetPipeline::url($asset);
+        $html = array();
+        foreach ($urls as $url)
+        {
+            $html[] = "<script src=\"$url\"></script>";
+        }
+
+        return implode("\n", $html);
     }
 }
 
