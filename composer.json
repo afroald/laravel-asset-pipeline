@@ -12,6 +12,9 @@
         "illuminate/support": "4.0.x",
         "afroald/php-sprockets": "dev-master"
     },
+    "require-dev": {
+        "oodle/krumo": "0.2.3"
+    },
     "repositories": [
         {
             "type": "vcs",
