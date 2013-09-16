@@ -15,7 +15,7 @@ class AssetController extends BaseController {
             \App::abort(404);
         }
 
-        $content = \Input::get('body') == 1 ? $asset->body : (string) $asset;
+        $content = \Input::get('body') == 1 ? $asset->body : $asset->content;
 
         return \Response::make($content, 200, array('Content-Type' => $asset->mimeType))
                     ->setPublic()
