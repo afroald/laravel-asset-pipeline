@@ -1,5 +1,6 @@
 <?php namespace Afroald\AssetPipeline\Engine;
 
+use Sprockets\Asset;
 use Sprockets\Pipeline;
 use Sprockets\Processor;
 use Illuminate\Filesystem\Filesystem;
@@ -19,7 +20,7 @@ class BladeEngine extends Processor {
 		$this->cachePath = $cachePath;
 	}
 
-	public function process($content)
+	public function process(Asset $asset, $content)
 	{
 		// Save the content to a temporary file
 		$filename = 'asset-'.md5($content);
