@@ -8,14 +8,13 @@ if ( ! function_exists('stylesheet_link_tag'))
         $urls = array();
 
         if (AssetPipeline::debug() || $debug) {
-            $dependencies = $asset->dependencies;
-            foreach ($dependencies as $dependency)
+            $requiredAssets = $asset->requiredAssets;
+            foreach ($requiredAssets as $requiredAsset)
             {
-                array_push($urls, AssetPipeline::url($dependency));
+                array_push($urls, AssetPipeline::url($requiredAsset));
             }
         }
 
-        $urls[] = AssetPipeline::url($asset);
         $html = array();
         foreach ($urls as $url)
         {
@@ -34,14 +33,13 @@ if ( ! function_exists('javascript_include_tag'))
         $urls = array();
 
         if (AssetPipeline::debug() || $debug) {
-            $dependencies = $asset->dependencies;
-            foreach ($dependencies as $dependency)
+            $requiredAssets = $asset->requiredAssets;
+            foreach ($requiredAssets as $requiredAsset)
             {
-                array_push($urls, AssetPipeline::url($dependency));
+                array_push($urls, AssetPipeline::url($requiredAsset));
             }
         }
 
-        $urls[] = AssetPipeline::url($asset);
         $html = array();
         foreach ($urls as $url)
         {
