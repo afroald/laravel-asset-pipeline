@@ -6,7 +6,7 @@ return array(
 
     'public_path' => public_path() . '/assets',
 
-    'manifest_path' => storage_path() .'/meta',
+    'manifest_path' => storage_path() .'/meta/assets.json',
 
     'public_url' => 'assets'
 

@@ -1,4 +1,4 @@
-<?php namespace Afroald\AssetPipeline\Engine;
+<?php namespace Afroald\AssetPipeline\Engines;
 
 use Sprockets\Asset;
 use Sprockets\Pipeline;
