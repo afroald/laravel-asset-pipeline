@@ -48,13 +48,13 @@ class AssetPipelineServiceProvider extends ServiceProvider {
 
 	public function registerAssetPipeline()
 	{
-		$this->app['asset-pipeline'] = $this->app->share(function($app)
-		{
-			return new AssetPipeline($app['config']['asset-pipeline::load_paths']);
-		});
-
 		$this->app['asset-pipeline.manifest'] = $this->app->share(function($app) {
 			return new Manifest($app['config']['asset-pipeline::manifest_path']);
+		});
+
+		$this->app['asset-pipeline'] = $this->app->share(function($app)
+		{
+			return new AssetPipeline($app['config']['asset-pipeline::config'], $app['asset-pipeline.manifest']);
 		});
 	}
 
@@ -67,7 +67,7 @@ class AssetPipelineServiceProvider extends ServiceProvider {
 		$compilerEngine = $app['view.engine.resolver']->resolve('blade');
 
 		$engine = new Engines\BladeEngine($pipeline, $app['files'], $compilerEngine, $cache);
-		$pipeline->registerEngine('.blade', $engine);
+		$pipeline->registerEngine('blade', $engine);
 	}
 
 	public function registerCleanCommand()

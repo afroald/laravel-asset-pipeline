@@ -1,6 +1,5 @@
 <?php namespace Afroald\AssetPipeline;
 
-use Sprockets\Asset;
 use Sprockets\File;
 
 class Manifest {
@@ -15,9 +14,9 @@ class Manifest {
 		$this->load();
 	}
 
-	public function add(Asset $asset)
+	public function add($logicalPath, $filename)
 	{
-		$this->manifest[$asset->logicalPath] = $asset->name(true);
+		$this->manifest[$logicalPath] = $filename;
 	}
 
 	public function has($logicalPath)

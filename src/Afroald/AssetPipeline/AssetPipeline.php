@@ -2,24 +2,60 @@
 
 
 use Config;
+use URL;
+
 use Sprockets\Asset;
 use Sprockets\Pipeline;
+use Sprockets\Asset\LogicalPath;
+
+use Afroald\AssetPipeline\Manifest;
 
 class AssetPipeline extends Pipeline {
 
-    public function url(Asset $asset)
-    {
-        // Also check the manifest!
+	protected $config;
+	protected $manifest;
 
-        return url(Config::get('asset-pipeline::public_url') . $asset->logicalPath) . ($this->debug() ? '?body=1' : '');
-    }
+	public function __construct($config, Manifest $manifest)
+	{
+		$this->config = $config;
+		$this->manifest = $manifest;
 
-    public function debug()
-    {
-    	if (Config::has('asset-pipeline::debug')) {
-    		return Config::get('asset-pipeline::debug');
-    	}
+		parent::__construct($config['load_paths']);
+	}
 
-    	return Config::get('app.debug');
-    }
+	public function url(Asset $asset)
+	{
+		if ($this->manifest->has($asset->logicalPathname) && !$this->debug())
+		{
+			$logicalPathname = $asset->logicalPath . '/' . $this->manifest->get($asset->logicalPathname);
+
+			return $this->urlForLogicalPathname($logicalPathname);
+		}
+
+		if ($this->debug() && count($asset->requiredAssets) > 1)
+		{
+			$pipeline = $this;
+
+			return array_map(function($asset) use($pipeline)
+			{
+				return $pipeline->urlForLogicalPathname($asset->logicalPathname);
+			}, $asset->requiredAssets);
+		}
+
+		return $this->urlForLogicalPathname($asset->logicalPathname);
+	}
+
+	public function urlForLogicalPathname($logicalPathname)
+	{
+		return URL::to($this->config['public_url'] . '/' . $logicalPathname . ($this->debug() ? '?body=1' : ''));
+	}
+
+	public function debug()
+	{
+		if (Config::has('asset-pipeline::debug')) {
+			return Config::get('asset-pipeline::debug');
+		}
+
+		return Config::get('app.debug');
+	}
 }
