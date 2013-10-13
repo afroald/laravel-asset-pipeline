@@ -1,0 +1,519 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "2dd3a2a28d040b4794cf6af9b98a0d8a",
+    "packages": [
+        {
+            "name": "afroald/php-sprockets",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/afroald/php-sprockets.git",
+                "reference": "d1bc5e44ad46e7652bce273377bb706e1a78c2e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/afroald/php-sprockets/zipball/d1bc5e44ad46e7652bce273377bb706e1a78c2e0",
+                "reference": "d1bc5e44ad46e7652bce273377bb706e1a78c2e0",
+                "shasum": ""
+            },
+            "require": {
+                "chh/shellwords": "0.1.0",
+                "coffeescript/coffeescript": "dev-master",
+                "leafo/lessphp": "dev-master",
+                "leafo/scssphp": "dev-master",
+                "leafo/scssphp-compass": "dev-master",
+                "symfony/filesystem": "2.3.*",
+                "symfony/finder": "2.3.*",
+                "symfony/http-foundation": "2.3.*"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.8.*",
+                "oodle/krumo": "0.2.3",
+                "phpunit/phpunit": "3.7.*",
+                "symfony/debug": "2.3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Sprockets": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Roald Hacquebord",
+                    "email": "roald@hacquebordbuckles.nl"
+                }
+            ],
+            "description": "A port (kind of) of the Sprockets gem.",
+            "support": {
+                "source": "https://github.com/afroald/php-sprockets/tree/master",
+                "issues": "https://github.com/afroald/php-sprockets/issues"
+            },
+            "time": "2013-10-13 21:38:59"
+        },
+        {
+            "name": "chh/shellwords",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/CHH/shellwords.git",
+                "reference": "8cd0e82d36ca71ae6f43466412c611249f71288c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/CHH/shellwords/zipball/8cd0e82d36ca71ae6f43466412c611249f71288c",
+                "reference": "8cd0e82d36ca71ae6f43466412c611249f71288c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "CHH": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Lame port of Ruby's Shellwords.rb",
+            "time": "2012-12-28 15:47:39"
+        },
+        {
+            "name": "coffeescript/coffeescript",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alxlit/coffeescript-php.git",
+                "reference": "30c22332f0514f466638eb71e3219526790c1b93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alxlit/coffeescript-php/zipball/30c22332f0514f466638eb71e3219526790c1b93",
+                "reference": "30c22332f0514f466638eb71e3219526790c1b93",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "CoffeeScript": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Little",
+                    "email": "alxlit@gmail.com",
+                    "homepage": "http://alxlit.name"
+                }
+            ],
+            "description": "A port of the CoffeeScript compiler to PHP.",
+            "homepage": "http://github.com/alxlit/coffeescript-php",
+            "keywords": [
+                "JS",
+                "coffee",
+                "coffeescript",
+                "javascript"
+            ],
+            "time": "2012-12-18 03:52:51"
+        },
+        {
+            "name": "illuminate/support",
+            "version": "4.0.x-dev",
+            "target-dir": "Illuminate/Support",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/support.git",
+                "reference": "bec895ef2331ff2f4afbbe48d1ea3d48c3bd8a9f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/bec895ef2331ff2f4afbbe48d1ea3d48c3bd8a9f",
+                "reference": "bec895ef2331ff2f4afbbe48d1ea3d48c3bd8a9f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.7.2",
+                "patchwork/utf8": "1.1.*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Illuminate\\Support": ""
+                },
+                "files": [
+                    "Illuminate/Support/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com",
+                    "homepage": "https://github.com/taylorotwell",
+                    "role": "Developer"
+                }
+            ],
+            "time": "2013-10-03 18:37:29"
+        },
+        {
+            "name": "leafo/lessphp",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leafo/lessphp.git",
+                "reference": "c6cd043c94ba2a94ae3eeedc7a4c925302b61252"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leafo/lessphp/zipball/c6cd043c94ba2a94ae3eeedc7a4c925302b61252",
+                "reference": "c6cd043c94ba2a94ae3eeedc7a4c925302b61252",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.4.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "lessc.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Leaf Corcoran",
+                    "email": "leafot@gmail.com",
+                    "homepage": "http://leafo.net"
+                }
+            ],
+            "description": "lessphp is a compiler for LESS written in PHP.",
+            "homepage": "http://leafo.net/lessphp/",
+            "time": "2013-10-04 15:40:57"
+        },
+        {
+            "name": "leafo/scssphp",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leafo/scssphp.git",
+                "reference": "bc9d6341855877b57741ebdfce7fa5a19ac593f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leafo/scssphp/zipball/bc9d6341855877b57741ebdfce7fa5a19ac593f5",
+                "reference": "bc9d6341855877b57741ebdfce7fa5a19ac593f5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "require-dev": {
+                "php": ">=5.3.0",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "bin": [
+                "pscss"
+            ],
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "scss.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Leaf Corcoran",
+                    "email": "leafot@gmail.com",
+                    "homepage": "http://leafo.net"
+                }
+            ],
+            "description": "scssphp is a compiler for SCSS written in PHP.",
+            "homepage": "http://leafo.net/scssphp/",
+            "time": "2013-10-07 18:28:57"
+        },
+        {
+            "name": "leafo/scssphp-compass",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/afroald/scssphp-compass.git",
+                "reference": "faf85eb41d240b45acc16db8ce7f8ffb1f6084d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/afroald/scssphp-compass/zipball/faf85eb41d240b45acc16db8ce7f8ffb1f6084d8",
+                "reference": "faf85eb41d240b45acc16db8ce7f8ffb1f6084d8",
+                "shasum": ""
+            },
+            "require": {
+                "leafo/scssphp": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "compass.inc.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Leaf Corcoran",
+                    "email": "leafot@gmail.com",
+                    "homepage": "http://leafo.net"
+                }
+            ],
+            "description": "Compass for scssphp",
+            "homepage": "http://leafo.net/scssphp/",
+            "support": {
+                "source": "https://github.com/afroald/scssphp-compass/tree/master"
+            },
+            "time": "2013-09-15 10:52:54"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "2.3.x-dev",
+            "target-dir": "Symfony/Component/Filesystem",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Filesystem.git",
+                "reference": "2b8995042086c5552c94d33b5553c492e9cfc00e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/2b8995042086c5552c94d33b5553c492e9cfc00e",
+                "reference": "2b8995042086c5552c94d33b5553c492e9cfc00e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-09-19 09:45:20"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "2.3.x-dev",
+            "target-dir": "Symfony/Component/Finder",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Finder.git",
+                "reference": "a175521f680b178e63c5d0ab87c6b046c0990c3f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/a175521f680b178e63c5d0ab87c6b046c0990c3f",
+                "reference": "a175521f680b178e63c5d0ab87c6b046c0990c3f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Finder\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-09-19 09:45:20"
+        },
+        {
+            "name": "symfony/http-foundation",
+            "version": "2.3.x-dev",
+            "target-dir": "Symfony/Component/HttpFoundation",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/HttpFoundation.git",
+                "reference": "ae8f725b270b670fb431ce6c01d30d242e5df943"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/ae8f725b270b670fb431ce6c01d30d242e5df943",
+                "reference": "ae8f725b270b670fb431ce6c01d30d242e5df943",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\HttpFoundation\\": ""
+                },
+                "classmap": [
+                    "Symfony/Component/HttpFoundation/Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony HttpFoundation Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-10-13 06:32:10"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "oodle/krumo",
+            "version": "v0.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/oodle/krumo.git",
+                "reference": "29fd75f37c159c3691cdf2a7c09a59bccb3b533e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/oodle/krumo/zipball/29fd75f37c159c3691cdf2a7c09a59bccb3b533e",
+                "reference": "29fd75f37c159c3691cdf2a7c09a59bccb3b533e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.17"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "class.krumo.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL"
+            ],
+            "authors": [
+                {
+                    "name": "Kaloyan K. Tsvetkov",
+                    "email": "kaloyan@kaloyan.info"
+                },
+                {
+                    "name": "Matthew J. Mucklo",
+                    "email": "mmucklo@corp.oodle.com"
+                },
+                {
+                    "name": "Stefan Thomas",
+                    "email": "moon@justmoon.de"
+                }
+            ],
+            "description": "KRUMO - version 2.0 of print_r(); and var_dump(); (with new updates)",
+            "keywords": [
+                "debug",
+                "debugging",
+                "krumo",
+                "pretty",
+                "print",
+                "print_r",
+                "var_dump"
+            ],
+            "time": "2013-06-28 22:47:04"
+        }
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "afroald/php-sprockets": 20
+    },
+    "platform": {
+        "php": ">=5.3.7"
+    },
+    "platform-dev": [
+
+    ]
+}
