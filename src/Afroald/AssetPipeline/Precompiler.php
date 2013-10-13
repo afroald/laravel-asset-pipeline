@@ -33,7 +33,7 @@ class Precompiler {
 				}
 				else if (is_string($filter))
 				{
-					$match = $filter === $asset->name;
+					$match = $filter === $asset->filename;
 				}
 
 				if ($match)
@@ -44,16 +44,16 @@ class Precompiler {
 				continue;
 
 			// Output the file with and without the digest in the filename
-			$output = new File($this->outputPath . DIRECTORY_SEPARATOR . $asset->name(true));
+			$output = new File($this->outputPath . DIRECTORY_SEPARATOR . $asset->logicalPath . DIRECTORY_SEPARATOR . $asset->filename(true));
 			$output->put($asset->content);
 
 			if ($asset->isStatic())
 			{
-				$output = new File($this->outputPath . $asset->logicalPath);
+				$output = new File($this->outputPath . DIRECTORY_SEPARATOR . $asset->logicalPathname);
 				$output->put($asset->content);
 			}
 
-			$this->manifest->add($asset);
+			$this->manifest->add($asset->logicalPathname, ($asset->logicalPath ? "{$asset->logicalPath}/" : '') . $asset->filename(true));
 		}
 
 		$this->manifest->save();

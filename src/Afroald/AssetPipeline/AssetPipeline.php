@@ -27,7 +27,7 @@ class AssetPipeline extends Pipeline {
 	{
 		if ($this->manifest->has($asset->logicalPathname) && !$this->debug())
 		{
-			$logicalPathname = $asset->logicalPath . '/' . $this->manifest->get($asset->logicalPathname);
+			$logicalPathname = $this->manifest->get($asset->logicalPathname);
 
 			return $this->urlForLogicalPathname($logicalPathname);
 		}
