@@ -20,7 +20,7 @@ class AssetPipeline extends Pipeline {
 		$this->config = $config;
 		$this->manifest = $manifest;
 
-		parent::__construct($config['load_paths']);
+		parent::__construct($config['load_paths'], $config['cache_path']);
 	}
 
 	public function url(Asset $asset)
