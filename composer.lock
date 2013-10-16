@@ -11,18 +11,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/afroald/php-sprockets.git",
-                "reference": "d1bc5e44ad46e7652bce273377bb706e1a78c2e0"
+                "reference": "0d5a5b7da6289c039ab5cf530820210b15673f72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/afroald/php-sprockets/zipball/d1bc5e44ad46e7652bce273377bb706e1a78c2e0",
-                "reference": "d1bc5e44ad46e7652bce273377bb706e1a78c2e0",
+                "url": "https://api.github.com/repos/afroald/php-sprockets/zipball/0d5a5b7da6289c039ab5cf530820210b15673f72",
+                "reference": "0d5a5b7da6289c039ab5cf530820210b15673f72",
                 "shasum": ""
             },
             "require": {
                 "chh/shellwords": "0.1.0",
                 "coffeescript/coffeescript": "dev-master",
-                "leafo/lessphp": "dev-master",
+                "leafo/lessphp": "0.4.0",
                 "leafo/scssphp": "dev-master",
                 "leafo/scssphp-compass": "dev-master",
                 "symfony/filesystem": "2.3.*",
@@ -52,7 +52,7 @@
                 "source": "https://github.com/afroald/php-sprockets/tree/master",
                 "issues": "https://github.com/afroald/php-sprockets/issues"
             },
-            "time": "2013-10-13 21:38:59"
+            "time": "2013-10-16 17:54:53"
         },
         {
             "name": "chh/shellwords",
@@ -181,22 +181,22 @@
         },
         {
             "name": "leafo/lessphp",
-            "version": "dev-master",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leafo/lessphp.git",
-                "reference": "c6cd043c94ba2a94ae3eeedc7a4c925302b61252"
+                "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leafo/lessphp/zipball/c6cd043c94ba2a94ae3eeedc7a4c925302b61252",
-                "reference": "c6cd043c94ba2a94ae3eeedc7a4c925302b61252",
+                "url": "https://api.github.com/repos/leafo/lessphp/zipball/51f3f06f0fe78a722dabfd14578444bdd078d9de",
+                "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de",
                 "shasum": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.4.x-dev"
+                    "dev-master": "0.3-dev"
                 }
             },
             "autoload": {
@@ -218,7 +218,7 @@
             ],
             "description": "lessphp is a compiler for LESS written in PHP.",
             "homepage": "http://leafo.net/lessphp/",
-            "time": "2013-10-04 15:40:57"
+            "time": "2013-08-09 17:09:19"
         },
         {
             "name": "leafo/scssphp",
@@ -404,12 +404,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "ae8f725b270b670fb431ce6c01d30d242e5df943"
+                "reference": "29e539f49621ca8bf641709c5362ebf2aa95c9a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/ae8f725b270b670fb431ce6c01d30d242e5df943",
-                "reference": "ae8f725b270b670fb431ce6c01d30d242e5df943",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/29e539f49621ca8bf641709c5362ebf2aa95c9a1",
+                "reference": "29e539f49621ca8bf641709c5362ebf2aa95c9a1",
                 "shasum": ""
             },
             "require": {
@@ -445,7 +445,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "http://symfony.com",
-            "time": "2013-10-13 06:32:10"
+            "time": "2013-10-16 15:16:00"
         }
     ],
     "packages-dev": [
