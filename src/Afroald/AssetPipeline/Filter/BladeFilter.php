@@ -1,20 +1,18 @@
-<?php namespace Afroald\AssetPipeline\Engines;
+<?php namespace Afroald\AssetPipeline\Filter;
 
 use Sprockets\Asset;
 use Sprockets\Pipeline;
-use Sprockets\Processor;
+use Sprockets\Filter\FilterInterface;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\View\Engines\CompilerEngine;
 
-class BladeEngine extends Processor {
+class BladeFilter implements FilterInterface {
 
 	protected $compilerEngine;
 	protected $cachePath;
 
 	public function __construct(Pipeline $pipeline, Filesystem $files, CompilerEngine $compilerEngine, $cachePath)
 	{
-		parent::__construct($pipeline);
-
 		$this->files = $files;
 		$this->compilerEngine = $compilerEngine;
 		$this->cachePath = $cachePath;

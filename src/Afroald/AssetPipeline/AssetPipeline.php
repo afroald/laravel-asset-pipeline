@@ -12,15 +12,17 @@ use Afroald\AssetPipeline\Manifest;
 
 class AssetPipeline extends Pipeline {
 
-	protected $config;
 	protected $manifest;
 
-	public function __construct($config, Manifest $manifest)
+	public function __construct(array $config, Manifest $manifest)
 	{
-		$this->config = $config;
+		$loadPaths = $config['load_paths'];
+		unset($config['load_paths']);
+		$this->config = $this->mergeOptions($this->config, $config);
+
 		$this->manifest = $manifest;
 
-		parent::__construct($config['load_paths'], $config['cache_path']);
+		parent::__construct($loadPaths);
 	}
 
 	public function url(Asset $asset)

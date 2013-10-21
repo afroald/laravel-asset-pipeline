@@ -1,7 +1,7 @@
 <?php namespace Afroald\AssetPipeline;
 
 use Afroald\AssetPipeline\Commands;
-use Afroald\AssetPipeline\Engines;
+use Afroald\AssetPipeline\Filter;
 use Illuminate\Support\ServiceProvider;
 
 class AssetPipelineServiceProvider extends ServiceProvider {
@@ -66,8 +66,8 @@ class AssetPipelineServiceProvider extends ServiceProvider {
 		$cache = $app['path.storage'].'/views';
 		$compilerEngine = $app['view.engine.resolver']->resolve('blade');
 
-		$engine = new Engines\BladeEngine($pipeline, $app['files'], $compilerEngine, $cache);
-		$pipeline->registerEngine('blade', $engine);
+		$engine = new Filter\BladeFilter($pipeline, $app['files'], $compilerEngine, $cache);
+		$pipeline->filters->registerEngine('blade', $engine);
 	}
 
 	public function registerCleanCommand()
