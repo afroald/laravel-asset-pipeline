@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/afroald/php-sprockets.git",
-                "reference": "e57764d9e36b744a479b074af79ea7567d36eadf"
+                "reference": "55b2482e77082bbc3dce1ea3ad17b36e71dc3202"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/afroald/php-sprockets/zipball/e57764d9e36b744a479b074af79ea7567d36eadf",
-                "reference": "e57764d9e36b744a479b074af79ea7567d36eadf",
+                "url": "https://api.github.com/repos/afroald/php-sprockets/zipball/55b2482e77082bbc3dce1ea3ad17b36e71dc3202",
+                "reference": "55b2482e77082bbc3dce1ea3ad17b36e71dc3202",
                 "shasum": ""
             },
             "require": {
@@ -49,7 +49,7 @@
                 "source": "https://github.com/afroald/php-sprockets/tree/master",
                 "issues": "https://github.com/afroald/php-sprockets/issues"
             },
-            "time": "2013-10-21 21:36:00"
+            "time": "2013-10-22 09:59:37"
         },
         {
             "name": "chh/shellwords",
