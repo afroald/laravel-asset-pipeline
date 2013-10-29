@@ -33,7 +33,7 @@ class Precompiler {
 				}
 				else if (is_string($filter))
 				{
-					$match = $filter === $asset->filename;
+					$match = $filter === $asset->logicalPathname;
 				}
 
 				if ($match)
